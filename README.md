@@ -108,5 +108,7 @@ one-time repo bootstrap, and how every later update gets built and versioned aut
   gone — that's the trade-off for everything being encrypted with a key nobody but you has.
 - **Statement OCR is a best-effort helper**, not a guaranteed parser for any particular bank's
   layout — always review the candidate transactions before confirming them.
-- **Signing**: release builds are currently debug-signed, which is fine for installing on your
-  own devices. Distributing this beyond that would need a real release keystore first.
+- **Signing**: as of v2.1, release builds use a real release keystore (set up via GitHub Actions
+  secrets — see `SETUP_INSTRUCTIONS.md`), not the Android debug key. That's what lets updates
+  install cleanly over a previous version, and it's a prerequisite for distributing beyond
+  direct sideloading.
