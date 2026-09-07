@@ -1,5 +1,3 @@
-### `.github/workflows/build-apk.yml`
-```yaml
 name: Build APK
 
 # Runs automatically right after "Unzip Upload" or "Bootstrap Project" finishes, and can
