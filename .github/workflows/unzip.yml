@@ -47,4 +47,3 @@ jobs:
             git commit -m "Auto-extract upload.zip"
             git push
           fi
-```
