@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SectionLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/wallet_accent</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="WalletInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="WalletInputEdit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- Every MaterialCardView in the app (list rows, summary cards, dialogs) gets this as its
+         default style via themes.xml's materialCardViewStyle attr, so the "glass panel" look -
+         a soft navy fill, rounded corners, and a faint teal-glow border - applies everywhere at
+         once. A card can still override any single part of this (e.g. fragment_finances.xml's
+         hero card sets its own cardBackgroundColor) without losing the rest. -->
+    <style name="Widget.DigitalWallet.GlassCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/wallet_surface_muted</item>
+        <item name="strokeColor">@color/glass_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">3dp</item>
+        <item name="rippleColor">@color/wallet_accent</item>
+    </style>
+
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/wallet_background_light">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/SectionLabel" android:text="@string/section_holding_details" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggle_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_type_stock"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/holding_type_stock" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_type_crypto"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/holding_type_crypto" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_type_cash"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/holding_type_cash" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_symbol"
+                style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_symbol" style="@style/WalletInputEdit"
+                    android:hint="@string/field_symbol"
+                    android:inputType="textCapCharacters" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_name"
+                style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_name" style="@style/WalletInputEdit"
+                    android:hint="@string/field_holding_name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_quantity"
+                style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_quantity" style="@style/WalletInputEdit"
+                    android:hint="@string/field_quantity"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_current_price"
+                style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_current_price" style="@style/WalletInputEdit"
+                    android:hint="@string/field_current_price"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_cost_basis"
+                style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_cost_basis" style="@style/WalletInputEdit"
+                    android:hint="@string/field_cost_basis"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_notes" style="@style/WalletInputEdit"
+                    android:hint="@string/field_notes"
+                    android:minLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/wallet_accent"
+                android:textColor="@color/wallet_text_dark"
+                android:text="@string/button_save" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

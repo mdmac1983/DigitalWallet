@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- BottomNavigationView's Material default picks the selected item's color from colorPrimary,
+     which in this app's navy+glass theme is a dark navy meant for toolbars/status bars - nearly
+     invisible against the equally-dark bottom nav background. This selector uses the accent
+     glow teal for the selected tab instead, so it's actually legible. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/wallet_accent" android:state_checked="true" />
+    <item android:color="@color/wallet_divider" />
+</selector>

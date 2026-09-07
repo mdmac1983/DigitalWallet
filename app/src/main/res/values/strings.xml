@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Digital Wallet</string>
+
+    <!-- PIN setup / unlock -->
+    <string name="pin_setup_title">Create a PIN</string>
+    <string name="pin_setup_subtitle">This PIN encrypts everything you store here. There is no way to recover your data if you forget it, so keep it somewhere safe.</string>
+    <string name="pin_hint">Enter PIN</string>
+    <string name="pin_confirm_hint">Confirm PIN</string>
+    <string name="pin_error_too_short">PIN must be at least 4 digits</string>
+    <string name="pin_error_mismatch">PINs do not match</string>
+    <string name="pin_error_incorrect">Incorrect PIN</string>
+    <string name="button_create_pin">Create PIN</string>
+    <string name="pin_unlock_title">Enter your PIN</string>
+    <string name="button_unlock">Unlock</string>
+
+    <!-- Main navigation -->
+    <string name="tab_wallet">Wallet</string>
+    <string name="tab_passwords">Passwords</string>
+    <string name="tab_contacts">Contacts</string>
+    <string name="wallet_subtab_cards">Cards</string>
+    <string name="wallet_subtab_ids">IDs</string>
+
+    <!-- Shared -->
+    <string name="add_entry">Add</string>
+    <string name="button_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="delete_confirm_title">Delete this entry?</string>
+    <string name="delete_confirm_message">This can\'t be undone.</string>
+    <string name="cancel">Cancel</string>
+    <string name="empty_state_default">Nothing here yet - tap + to add one</string>
+    <string name="photo_front">Front</string>
+    <string name="photo_back">Back</string>
+    <string name="photo_photo">Photo</string>
+    <string name="image_source_camera">Take a photo</string>
+    <string name="image_source_gallery">Choose from gallery</string>
+    <string name="action_change_photo">Change photo</string>
+    <string name="action_copy_card_number">Copy card number</string>
+    <string name="copied_card_number">Card number copied</string>
+
+    <!-- Wallet > Cards -->
+    <string name="section_card_details">Card details</string>
+    <string name="section_billing_address">Billing address (optional)</string>
+    <string name="section_linked_login">Website / portal login (optional)</string>
+    <string name="field_card_issuer">Credit card issuer</string>
+    <string name="field_card_name">Card name</string>
+    <string name="field_cardholder_name">Cardholder name</string>
+    <string name="field_card_number">Credit card number</string>
+    <string name="field_exp_date">Exp. date</string>
+    <string name="field_cvv">CVV</string>
+    <string name="field_credit_limit">Credit limit (optional)</string>
+    <string name="field_billing_address">Street address</string>
+    <string name="field_billing_city">City</string>
+    <string name="field_billing_state">State</string>
+    <string name="field_billing_zip">ZIP</string>
+    <string name="field_website_portal">Website / portal</string>
+    <string name="field_username">Username</string>
+    <string name="field_password">Password</string>
+    <string name="new_card_title">Add card</string>
+    <string name="edit_card_title">Edit card</string>
+
+    <!-- Wallet > IDs -->
+    <string name="section_id_details">Document details</string>
+    <string name="field_document_type">Document type</string>
+    <string name="field_full_name">Full name</string>
+    <string name="field_document_number">Document number</string>
+    <string name="field_issue_date">Issue date</string>
+    <string name="field_expiration_date">Expiration date</string>
+    <string name="field_issuing_region">Issuing state / country</string>
+    <string name="field_notes">Notes</string>
+    <string name="new_id_title">Add ID</string>
+    <string name="edit_id_title">Edit ID</string>
+    <string name="doc_type_drivers_license">Driver\'s License</string>
+    <string name="doc_type_state_id">State ID</string>
+    <string name="doc_type_ssn_card">Social Security Card</string>
+    <string name="doc_type_passport">Passport</string>
+
+    <!-- Passwords -->
+    <string name="section_password_details">Login details</string>
+    <string name="field_category">Category</string>
+    <string name="field_account_name">Site / app name</string>
+    <string name="field_url">URL</string>
+    <string name="new_password_title">Add password</string>
+    <string name="edit_password_title">Edit password</string>
+    <string name="category_email">Email</string>
+    <string name="category_social_media">Social Media</string>
+    <string name="category_website">Website</string>
+    <string name="category_banking">Banking</string>
+    <string name="category_investment">Investment</string>
+    <string name="category_other">Other</string>
+
+    <!-- Contacts -->
+    <string name="section_contact_details">Contact details</string>
+    <string name="field_name">Name</string>
+    <string name="field_phone">Phone</string>
+    <string name="field_email">Email</string>
+    <string name="field_address">Address</string>
+    <string name="field_company">Company</string>
+    <string name="new_contact_title">Add contact</string>
+    <string name="edit_contact_title">Edit contact</string>
+    <string name="category_family">Family</string>
+    <string name="category_friend">Friend</string>
+    <string name="category_work">Work</string>
+    <string name="category_business">Business</string>
+
+    <!-- Sort options (Passwords, Contacts) -->
+    <string name="action_sort">Sort</string>
+    <string name="sort_mode_alphabetical">Alphabetical</string>
+    <string name="sort_mode_type">By type</string>
+    <string name="sort_mode_manual">Manual (drag to reorder)</string>
+
+    <!-- View type options (Wallet, Passwords, Contacts, Sales) -->
+    <string name="action_view_mode">View</string>
+    <string name="view_mode_tiles">Tiles</string>
+    <string name="view_mode_compact">Compact</string>
+    <string name="view_mode_list">List</string>
+
+    <!-- Finances at a Glance -->
+    <string name="tab_finances">Finances at a Glance</string>
+    <string name="finances_summary_income">Income</string>
+    <string name="finances_summary_expenses">Expenses</string>
+    <string name="finances_summary_net">Net</string>
+    <string name="section_finance_details">Entry details</string>
+    <string name="field_type">Type</string>
+    <string name="type_income">Income</string>
+    <string name="type_expense">Expense</string>
+    <string name="field_amount">Amount</string>
+    <string name="field_date">Date</string>
+    <string name="field_category_editable">Category (type or choose)</string>
+    <string name="field_source">Source / account</string>
+    <string name="new_finance_title">Add entry</string>
+    <string name="edit_finance_title">Edit entry</string>
+    <string name="field_required">This field is required</string>
+    <string name="field_type_label">Custom label (optional)</string>
+    <string name="type_label_hint">Leave blank for Income/Expense, or type your own word - Deposit, Withdrawal, Debit, Credit</string>
+
+    <!-- Finances at a Glance > statement import -->
+    <string name="action_import_statement">Import Statement</string>
+    <string name="action_view_statements">Statements</string>
+    <string name="action_monthly_pdf">Monthly PDF</string>
+    <string name="import_statement_title">Import statement</string>
+    <string name="import_statement_subtitle">Upload a bank, credit card, or investment statement (PDF, or a photo of a paper one). It\'s read entirely on this device - nothing is uploaded anywhere. You\'ll review every transaction before anything is saved.</string>
+    <string name="field_institution">Institution / account name</string>
+    <string name="field_statement_type">Statement type</string>
+    <string name="field_statement_month">Statement month</string>
+    <string name="field_beginning_balance">Beginning balance (optional)</string>
+    <string name="field_ending_balance">Ending balance (optional)</string>
+    <string name="statement_balance_hint">If your statement shows a beginning/ending balance, type them in here - the app doesn\'t calculate these itself, it just keeps what the statement says.</string>
+    <string name="statement_balance_format">Balance: %1$s → %2$s</string>
+    <string name="statement_type_bank">Bank</string>
+    <string name="statement_type_credit_card">Credit Card</string>
+    <string name="statement_type_investment">Investment</string>
+    <string name="statement_no_file_selected">No file selected</string>
+    <string name="statement_choose_file">Choose file</string>
+    <string name="statement_source_pdf">PDF file</string>
+    <string name="statement_file_read_failed">Couldn\'t read that file</string>
+    <string name="statement_extracting">Reading statement and looking for transactions…</string>
+    <string name="statement_import_and_parse">Scan for transactions</string>
+    <string name="statement_none_found">No transaction-looking lines found - you can still view the statement from the Statements list, or add entries manually</string>
+
+    <!-- Review parsed transactions -->
+    <string name="review_parsed_title">Review parsed transactions</string>
+    <string name="review_parsed_subtitle">Best-effort guesses from the statement - check each one before adding. Nothing is saved until you confirm.</string>
+    <string name="review_edit">Edit</string>
+    <string name="button_add_selected">Add selected to Finances</string>
+    <string name="parsed_added_format">Added %1$d entries to Finances</string>
+
+    <!-- Statements list -->
+    <string name="statements_title">Statements</string>
+    <string name="statement_view_original">View original file</string>
+    <string name="statement_delete_confirm_message">Delete this statement record and its stored file? Any Finances entries already added from it are kept.</string>
+
+    <!-- Monthly PDF -->
+    <string name="monthly_pdf_pick_month_title">Generate PDF for which month?</string>
+    <string name="monthly_pdf_generating">Building consolidated statement…</string>
+    <string name="monthly_pdf_none_found">No Finances entries found for that month</string>
+    <string name="monthly_pdf_open">Open</string>
+    <string name="monthly_pdf_share">Share</string>
+
+    <!-- Finances at a Glance > Portfolio (manually-entered stock/crypto holdings) -->
+    <string name="section_portfolio">Portfolio</string>
+    <string name="action_add_holding">Add holding</string>
+    <string name="action_toggle_portfolio">Show/hide holdings</string>
+    <string name="action_drag_reorder">Drag to reorder</string>
+    <string name="portfolio_total_value">Total value</string>
+    <string name="portfolio_total_gain_loss">Gain / loss</string>
+    <string name="portfolio_empty">No holdings yet - tap + to add a stock or crypto position</string>
+    <string name="value_not_set">—</string>
+    <string name="gain_loss_not_tracked">Not tracked</string>
+    <string name="section_holding_details">Holding details</string>
+    <string name="holding_type_stock">Stock</string>
+    <string name="holding_type_crypto">Crypto</string>
+    <string name="holding_type_cash">Cash</string>
+    <string name="field_symbol">Symbol (e.g. AAPL, BTC)</string>
+    <string name="field_cash_label">Label (e.g. Brokerage Cash)</string>
+    <string name="field_holding_name">Name (optional)</string>
+    <string name="field_quantity">Quantity</string>
+    <string name="field_cost_basis">Cost basis per unit (optional)</string>
+    <string name="field_current_price">Current price per unit</string>
+    <string name="field_cash_amount">Cash amount</string>
+    <string name="holding_cash_meta">Uninvested cash</string>
+    <string name="new_holding_title">Add holding</string>
+    <string name="edit_holding_title">Edit holding</string>
+    <string name="holding_updated_format">Updated %1$s</string>
+
+    <!-- Sales -->
+    <string name="tab_sales">Sales</string>
+    <string name="sales_summary_gross">Gross</string>
+    <string name="sales_summary_net">Net fees</string>
+    <string name="sales_summary_unpaid">Unpaid</string>
+    <string name="section_sale_details">Sale details</string>
+    <string name="field_client_id">Client ID</string>
+    <string name="field_service">Service</string>
+    <string name="field_price">Price</string>
+    <string name="field_commission_fee">Commission fee (optional)</string>
+    <string name="field_partner_fee">Partner fee (optional)</string>
+    <string name="sale_net_fee_format">Net fee: %1$s</string>
+    <string name="sale_status_paid">Paid</string>
+    <string name="sale_status_unpaid">Unpaid</string>
+    <string name="sale_status_partial">Partial</string>
+    <string name="field_amount_paid">Amount paid</string>
+    <string name="sale_balance_due_format">Balance due: %1$s</string>
+    <string name="sale_entry_number_format">(%1$s)</string>
+    <string name="new_sale_title">Add sale</string>
+    <string name="edit_sale_title">Edit sale</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_change_pin">Change PIN</string>
+    <string name="settings_change_pin_subtitle">Update the PIN that protects and encrypts your data</string>
+    <string name="settings_version">Version</string>
+    <string name="settings_version_value_format">%1$s (build %2$d)</string>
+    <string name="settings_changelog">Changelog</string>
+    <string name="settings_about_footer">©2026 OrionMD</string>
+    <string name="current_pin_hint">Current PIN</string>
+    <string name="change_pin_dialog_title">Change PIN</string>
+    <string name="pin_error_current_incorrect">Current PIN is incorrect</string>
+    <string name="pin_change_success">PIN changed</string>
+    <string name="pin_change_in_progress">Re-encrypting your data with the new PIN…</string>
+
+    <!-- Settings > Backup -->
+    <string name="settings_backup_section">Backup</string>
+    <string name="settings_backup_export">Export backup</string>
+    <string name="settings_backup_export_subtitle">Save an encrypted copy of everything to a file you choose</string>
+    <string name="settings_backup_import">Restore from backup</string>
+    <string name="settings_backup_import_subtitle">Replace everything on this device with a backup file</string>
+    <string name="backup_import_warning_title">Restore from backup?</string>
+    <string name="backup_import_warning_message">This replaces ALL data currently on this device with what\'s in the backup file, and can\'t be undone. Only restore a backup made under the SAME PIN you use now - one made under a different PIN will not decrypt correctly.</string>
+    <string name="backup_export_success">Backup saved</string>
+    <string name="backup_export_failed">Couldn\'t create the backup</string>
+    <string name="backup_import_success">Backup restored - restart the app to see your data</string>
+    <string name="backup_import_failed">Couldn\'t restore that backup file - is it a Digital Wallet backup?</string>
+    <string name="action_restart_now">Restart now</string>
+
+    <!-- Settings > Support -->
+    <string name="settings_support_footer">Support this app</string>
+    <string name="buy_me_a_coffee">Buy me a coffee</string>
+    <!-- TODO: replace with the real buymeacoffee.com page once it's confirmed -->
+    <string name="buy_me_a_coffee_url" translatable="false">https://www.buymeacoffee.com/orionmd</string>
+
+</resources>

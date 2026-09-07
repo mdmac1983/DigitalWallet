@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- "Navy + glass" premium palette. A few of these names are historical (from the original
+         light-mode blue theme) and no longer literally describe the color they hold - e.g.
+         wallet_background_light is now a deep navy, not a light color - but every layout in the
+         app already references these names, so repainting the values here re-themes the whole
+         app without having to touch every layout individually. -->
+    <color name="wallet_primary">#101A33</color>
+    <color name="wallet_primary_dark">#080D1C</color>
+    <color name="wallet_accent">#2FE6C2</color>
+    <color name="wallet_error">#FF5C7A</color>
+    <color name="wallet_background_light">#0B0F1E</color>
+    <color name="wallet_background_dark">#05070F</color>
+    <color name="wallet_text_light">#F4F7FB</color>
+    <color name="wallet_text_dark">#0B1220</color>
+    <color name="wallet_surface_muted">#16213A</color>
+    <color name="wallet_divider">#8792A8</color>
+    <color name="wallet_income">#34D399</color>
+    <color name="wallet_expense">#FB7185</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- The "glass" card edge: accent teal at low alpha, used as every card's default border. -->
+    <color name="glass_stroke">#402FE6C2</color>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/wallet_background_light">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/SectionLabel" android:text="@string/section_id_details" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/field_document_type"
+                android:textSize="13sp" />
+
+            <Spinner
+                android:id="@+id/spinner_doc_type"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_image_placeholder" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_full_name" style="@style/WalletInputEdit"
+                    android:hint="@string/field_full_name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_document_number" style="@style/WalletInputEdit"
+                    android:hint="@string/field_document_number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/WalletInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_issue_date" style="@style/WalletInputEdit"
+                        android:hint="@string/field_issue_date" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/WalletInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_expiration_date" style="@style/WalletInputEdit"
+                        android:hint="@string/field_expiration_date" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_issuing_region" style="@style/WalletInputEdit"
+                    android:hint="@string/field_issuing_region" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_notes" style="@style/WalletInputEdit"
+                    android:hint="@string/field_notes"
+                    android:minLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <include android:id="@+id/photos" layout="@layout/include_front_back_photos" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/wallet_accent"
+                android:textColor="@color/wallet_text_dark"
+                android:text="@string/button_save" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

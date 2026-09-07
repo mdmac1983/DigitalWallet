@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/wallet_background_light">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"
+        app:navigationIconTint="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView style="@style/SectionLabel" android:text="@string/section_sale_details" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_date" style="@style/WalletInputEdit"
+                    android:hint="@string/field_date" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_client_id" style="@style/WalletInputEdit"
+                    android:hint="@string/field_client_id" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_service" style="@style/WalletInputEdit"
+                    android:hint="@string/field_service" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_price" style="@style/WalletInputEdit"
+                    android:hint="@string/field_price"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_commission_fee" style="@style/WalletInputEdit"
+                    android:hint="@string/field_commission_fee"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_partner_fee" style="@style/WalletInputEdit"
+                    android:hint="@string/field_partner_fee"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_net_fee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/wallet_accent" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggle_paid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_status_unpaid"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sale_status_unpaid" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_status_partial"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sale_status_partial" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_status_paid"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/sale_status_paid" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_amount_paid"
+                style="@style/WalletInputLayout"
+                android:visibility="gone">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_amount_paid" style="@style/WalletInputEdit"
+                    android:hint="@string/field_amount_paid"
+                    android:inputType="numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_balance_due"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/wallet_expense" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/WalletInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_notes" style="@style/WalletInputEdit"
+                    android:hint="@string/field_notes"
+                    android:minLines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/wallet_accent"
+                android:textColor="@color/wallet_text_dark"
+                android:text="@string/button_save" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

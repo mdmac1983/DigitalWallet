@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_wallet"
+        android:title="@string/tab_wallet"
+        android:icon="@drawable/ic_card_placeholder" />
+    <item
+        android:id="@+id/nav_passwords"
+        android:title="@string/tab_passwords"
+        android:icon="@drawable/ic_password_placeholder" />
+    <item
+        android:id="@+id/nav_contacts"
+        android:title="@string/tab_contacts"
+        android:icon="@drawable/ic_contact_placeholder" />
+    <item
+        android:id="@+id/nav_finances"
+        android:title="@string/tab_finances"
+        android:icon="@drawable/ic_finance_placeholder" />
+    <item
+        android:id="@+id/nav_sales"
+        android:title="@string/tab_sales"
+        android:icon="@drawable/ic_sale_placeholder" />
+</menu>
