@@ -27,17 +27,38 @@ android {
         // splits.abi.include, not here (Gradle rejects setting both).
     }
 
+    // Real release signing, read entirely from environment variables so the keystore itself
+    // and its passwords never touch source control. Set locally (for a one-off manual release
+    // build) or, normally, injected by build-apk.yml from GitHub Actions secrets. When these
+    // aren't set - any ad-hoc/local build, including this sandbox - `release` quietly falls
+    // back to debug signing, same as before, so nothing here can break a build that doesn't
+    // have the real keystore available.
+    val releaseKeystorePath = System.getenv("RELEASE_KEYSTORE_PATH")
+    val hasReleaseSigning = !releaseKeystorePath.isNullOrBlank()
+
+    signingConfigs {
+        if (hasReleaseSigning) {
+            create("release") {
+                storeFile = file(releaseKeystorePath!!)
+                storePassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("RELEASE_KEY_ALIAS")
+                keyPassword = System.getenv("RELEASE_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         debug {
             isMinifyEnabled = false
         }
         release {
-            // No custom signing config yet: builds a debug-signed release-optimized APK
-            // for sideloading. Add a real keystore + signingConfig here before ever
-            // distributing this more broadly than your own devices.
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = if (hasReleaseSigning) {
+                signingConfigs.getByName("release")
+            } else {
+                signingConfigs.getByName("debug")
+            }
         }
     }
 
