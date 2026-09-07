@@ -1,0 +1,48 @@
+name: Bootstrap Project
+
+# One-time, manually triggered setup: upload a file named exactly "project.zip"
+# containing the ENTIRE project (everything this repo's root should contain,
+# except .github - a workflow can never push changes to .github/workflows/*.yml,
+# so unzip.yml and build-apk.yml must already be pasted in by hand before you run this).
+#
+# How to run it: GitHub app/site -> this repo -> Actions tab -> "Bootstrap Project"
+# in the left list -> "Run workflow" button -> Run workflow.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract project.zip into the repo root (excluding .github)
+        run: |
+          set -e
+          if [ ! -f project.zip ]; then
+            echo "No project.zip found at repo root. Upload it first, then re-run this workflow."
+            exit 1
+          fi
+          TMP_DIR=$(mktemp -d)
+          unzip -o project.zip -d "$TMP_DIR"
+          rsync -a --exclude='.github' "$TMP_DIR"/ ./
+          rm -f project.zip
+          rm -rf "$TMP_DIR"
+
+      - name: Commit and push the extracted project
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit - was project.zip empty?"
+          else
+            git commit -m "Bootstrap: extract initial project from project.zip"
+            git push
+          fi
