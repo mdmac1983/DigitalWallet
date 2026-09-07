@@ -101,4 +101,3 @@ jobs:
           name: digital-wallet-v${{ steps.version.outputs.version_name }}
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
-```
