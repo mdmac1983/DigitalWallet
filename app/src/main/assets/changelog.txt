@@ -13,3 +13,4 @@
 2.2 - 2026-09-07 - Automated build (GitHub Actions run #7)
 2.3 - 2026-09-08 - Automated build (GitHub Actions run #8)
 2.4 - 2026-09-08 - Automated build (GitHub Actions run #9)
+2.5 - 2026-09-08 - Automated build (GitHub Actions run #10)
