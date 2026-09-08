@@ -11,3 +11,4 @@
 2.0 - 2026-09-07 - Passwords and Contacts can now be sorted Alphabetically, by Type, or Manually (drag to reorder) - tap the sort icon at the top of either list. Contacts gained a Category field (Family/Friend/Work/Business/Other) to make "by Type" sorting useful. Every list in the app - Cards, IDs, Passwords, Contacts, and Sales - now has a view-style option (tap the grid icon): Tiles (the original card look), Compact, or a flat List view, each remembered separately per list.
 2.1 - 2026-09-07 - Builds are now signed with a real release key instead of the Android debug key - no functional changes, but this is required for installing over a previous version without uninstalling first, and for eventual distribution beyond direct sideloading.
 2.2 - 2026-09-07 - Automated build (GitHub Actions run #7)
+2.3 - 2026-09-08 - Automated build (GitHub Actions run #8)

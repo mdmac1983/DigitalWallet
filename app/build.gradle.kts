@@ -14,8 +14,8 @@ android {
         targetSdk = 34
         // versionCode/versionName are bumped automatically by the build workflow.
         // Do not hand-edit these two lines' values without also updating changelog.txt.
-        versionCode = 13
-        versionName = "2.2"
+        versionCode = 14
+        versionName = "2.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
