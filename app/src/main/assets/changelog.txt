@@ -12,3 +12,4 @@
 2.1 - 2026-09-07 - Builds are now signed with a real release key instead of the Android debug key - no functional changes, but this is required for installing over a previous version without uninstalling first, and for eventual distribution beyond direct sideloading.
 2.2 - 2026-09-07 - Automated build (GitHub Actions run #7)
 2.3 - 2026-09-08 - Automated build (GitHub Actions run #8)
+2.4 - 2026-09-08 - Automated build (GitHub Actions run #9)
